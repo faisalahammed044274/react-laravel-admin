@@ -19,10 +19,14 @@ use App\Http\Controllers\UserController;
 //     return $request->user();
 // });
 
-
-Route::get('users',['UserController::class','index']);
-Route::get('users/{id}',['UserController::class','show']);
-Route::post('users',['UserController::class','store']);
-Route::put('users/{id}',['UserController::class','update']);
-Route::delete('users/{id}',['UserController::class','destroy']);
+Route::get('users','App\Http\Controllers\UserController@index');
+Route::get('user/{id}','App\Http\Controllers\UserController@show');
+Route::post('users','App\Http\Controllers\UserController@store');
+Route::put('user/{id}','App\Http\Controllers\UserController@update');
+Route::delete('user/{id}','App\Http\Controllers\UserController@destroy');
+// Route::get('users','UserController@index');
+// Route::get('user/{id}','UserController@show');
+// Route::post('users','UserController@store');
+// Route::put('user/{id}','UserController@update');
+// Route::delete('user/{id}','UserController@destroy');
 
